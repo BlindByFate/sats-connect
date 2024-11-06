@@ -270,8 +270,6 @@ const WalletMethods = () => {
   const { network, btcAddressInfo, stxAddressInfo, onDisconnect, accountId } =
     useConnectionContext();
 
-  if (!accountId) return <div>Error: no account ID set.</div>;
-
   return (
     <>
       <div>
@@ -293,8 +291,6 @@ const WalletMethods = () => {
 
 const BitcoinMethods = () => {
   const { network, btcAddressInfo, onDisconnect, accountId } = useConnectionContext();
-
-  if (!accountId) return <div>Error: no account ID set.</div>;
 
   return (
     <>
@@ -319,8 +315,6 @@ const BitcoinMethods = () => {
 
 const StacksMethods = () => {
   const { network, stxAddressInfo, onDisconnect, accountId } = useConnectionContext();
-
-  if (!accountId) return <div>Error: no account ID set.</div>;
 
   return (
     <>

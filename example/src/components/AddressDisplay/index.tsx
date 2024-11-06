@@ -2,7 +2,7 @@ import { Address, BitcoinNetworkType } from 'sats-connect';
 import { Button, Card, H4 } from '../../App.styles';
 
 interface Props {
-  accountId: string;
+  accountId: string | null;
   network: BitcoinNetworkType;
   addresses: Address[];
   onDisconnect: () => void;
@@ -13,7 +13,7 @@ export const AddressDisplay = ({ accountId, network, addresses, onDisconnect }: 
     <Card>
       <h3>Connected Addresses - ({network})</h3>
       <div>
-        <H4>Account: {accountId}</H4>
+        <H4>Account: {accountId || '-'}</H4>
       </div>
       {addresses.map((address) => (
         <div key={address.purpose}>
